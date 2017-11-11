@@ -45,8 +45,8 @@ s_weather s_weather_v;
 
 char* http(void)
 {
-	FILE *fp;
-	FILE *fp_text;
+	FILE *fp=NULL;
+	FILE *fp_text=NULL;
 	//char buf[BUFSIZ];
 	if (NULL != (fp = popen("curl http://tianqi.moji.com/", "r")))
 	{
@@ -64,8 +64,11 @@ char* http(void)
 	//fp_text=fopen("weather.text","w+");
 	//fprintf(fp_text,"%s",buf);
 	//printf("%s\n", buf);
-	pclose(fp);
-	pclose(fp_text);
+	if(fp!=NULL)
+	{
+		pclose(fp);
+		pclose(fp_text);
+	}
 	return buf;
 }
 
@@ -113,7 +116,7 @@ int regular(char *bematch,char *pattern)
 
 	if(err == REG_NOMATCH)
 	{
-		printf("no match\n");
+		//printf("no match\n");
 		//exit(-1);
 		return 0;
 	}
