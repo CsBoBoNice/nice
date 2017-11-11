@@ -77,8 +77,8 @@ int USAR::uart_write(char *buff, int size)
 	lseek(fp,0,SEEK_SET);
 	if (write(fp, buff, size)<0)
 	{
-		perror("write");
-		exit(EXIT_FAILURE);
+		//perror("write");
+		//exit(EXIT_FAILURE);
 	}
 	return size;
 }
@@ -92,12 +92,13 @@ int USAR::init_uart(char *tty_name, int speed, int databits, int stopbits, int p
 	system(chmod_buf);
 */
 
-//	chmod(tty_name,0777);
+	chmod(tty_name,0777);
 
 	if ((fp = open(tty_name, O_RDWR)) == -1)
 	{
-		perror("open");
-		exit(EXIT_FAILURE);
+		//perror("open");
+		printf("error:open\n");
+		//exit(EXIT_FAILURE);
 	}
 
 	set_speed(fp, speed);
@@ -105,7 +106,7 @@ int USAR::init_uart(char *tty_name, int speed, int databits, int stopbits, int p
 	if (set_Parity(fp, databits, stopbits, parity) == FALSE)
 	{
 		printf("error:set_Parity\n");
-		exit(EXIT_FAILURE);
+		//exit(EXIT_FAILURE);
 	}
 
 	//close(fd);
@@ -127,7 +128,7 @@ void USAR::set_speed(int fd, int speed)
 			cfsetospeed(&Opt, speed_arr[i]);
 			status = tcsetattr(fd, TCSANOW, &Opt);
 			if (status != 0)
-				perror("tcsetattr fd1");
+				//perror("tcsetattr fd1");
 			return;
 
 		}

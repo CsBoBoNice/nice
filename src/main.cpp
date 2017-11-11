@@ -49,15 +49,20 @@ char* http(void)
 	FILE *fp_text;
 	//char buf[BUFSIZ];
 	if (NULL != (fp = popen("curl http://tianqi.moji.com/", "r")))
+	{
 		fread(buf, 1024*1024, 1, fp);
+		fp_text=fopen("weather.text","w+");
+		fprintf(fp_text,"%s",buf);
+	}
 	else 
 	{
-		fprintf(stderr, "popen error...\n");
-		exit(1);
+		printf("error:popen error\n");
+		//fprintf(stderr, "popen error...\n");
+		//exit(1);
 	}
 	
-	fp_text=fopen("weather.text","w+");
-	fprintf(fp_text,"%s",buf);
+	//fp_text=fopen("weather.text","w+");
+	//fprintf(fp_text,"%s",buf);
 	//printf("%s\n", buf);
 	pclose(fp);
 	pclose(fp_text);
@@ -73,10 +78,13 @@ char* open_file()
 	{
 		return 0;
 	}
-	fseek(file,0,SEEK_END);
-	len=ftell(file);
-	fseek(file,0,SEEK_SET);
-	fread(buf,1,len,file);
+	else
+	{
+		fseek(file,0,SEEK_END);
+		len=ftell(file);
+		fseek(file,0,SEEK_SET);
+		fread(buf,1,len,file);
+	}
 	//printf("%s",buf);
 	fclose(file);
 	return buf;
@@ -98,7 +106,7 @@ int regular(char *bematch,char *pattern)
 	if(regcomp(&reg,pattern,REG_EXTENDED) < 0)
 	{
 		//regerror(err,&reg,errbuf,sizeof(errbuf));
-		//printf("err:%s\n",errbuf);
+		printf("err:%s\n",errbuf);
 	}
 	 
 	err = regexec(&reg,bematch,nm,pmatch,0);
@@ -387,36 +395,39 @@ int main(void)
 	char dev_buf[] = "/dev/ttyAMA0";
 	USAR usar;
 	
-	usar.init_uart(dev_buf, 9600, 8, 1, 'N');
+	//usar.init_uart(dev_buf, 9600, 8, 1, 'N');
 	
 	sleep(60);
 	while(1)
 	{
-		init_wheather();
-	
-		//usar.uart_write(dev_buf, strlen(dev_buf));
-		//usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
+		init_wheather();	
+		usar.init_uart(dev_buf, 9600, 8, 1, 'N');
+		
 		if(i==0)
 		{
-			printf("get\n");
+			//printf("get\n");
 			p_bematch=http();// www.xxx.com
 		}
 		else
 		{
-			printf("open\n");
+			//printf("open\n");
 			p_bematch=open_file();
 		}
+		if(p_bematch!=0)
+		{
+			get_today_weater(p_bematch);
+			get_tomorrow_weater(p_bematch);
+			usar.uart_write(head, 2);
+			usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
+		}
 	
-		get_today_weater(p_bematch);
-		get_tomorrow_weater(p_bematch);
-	
-		usar.uart_write(head, 2);
-		usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
-	
-		show_num();	
+		//usar.uart_write(head, 2);
+		//usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
+		usar.close_uart();	
+		//show_num();	
 		sleep(5);
 		i++;
-		if(i==100)
+		if(i==360)
 		{
 			i=0;
 		}

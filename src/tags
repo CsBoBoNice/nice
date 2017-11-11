@@ -1,0 +1,39 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+USAR	usar.cpp	/^USAR::USAR()$/;"	f	class:USAR
+buf	main.cpp	/^char buf[2*1024*1024];$/;"	v
+close_uart	usar.cpp	/^void USAR::close_uart()$/;"	f	class:USAR
+get_today_weater	main.cpp	/^int get_today_weater(char *all_buff)$/;"	f
+get_tomorrow_weater	main.cpp	/^int get_tomorrow_weater(char *all_buff)$/;"	f
+http	main.cpp	/^char* http(void)$/;"	f
+init_uart	usar.cpp	/^int USAR::init_uart(char *tty_name, int speed, int databits, int stopbits, int parity)$/;"	f	class:USAR
+init_wheather	main.cpp	/^void init_wheather()$/;"	f
+main	main.cpp	/^int main(void)$/;"	f
+match_buf	main.cpp	/^char match_buf[10][2*1024*1024];$/;"	v
+memset_buf	main.cpp	/^void memset_buf()$/;"	f
+name_arr	usar.cpp	/^const int name_arr[] = { 38400, 19200, 4800, 2400, 1200, 300,$/;"	v
+open_file	main.cpp	/^char* open_file()$/;"	f
+regular	main.cpp	/^int regular(char *bematch,char *pattern)$/;"	f
+s_weather	main.cpp	/^}s_weather;$/;"	t	typeref:struct:weather_s	file:
+s_weather_v	main.cpp	/^s_weather s_weather_v;$/;"	v
+set_Parity	usar.cpp	/^int USAR::set_Parity(int fd, int databits, int stopbits, int parity)$/;"	f	class:USAR
+set_speed	usar.cpp	/^void USAR::set_speed(int fd, int speed)$/;"	f	class:USAR
+show_find	main.cpp	/^void show_find()$/;"	f
+show_num	main.cpp	/^void show_num()$/;"	f
+speed_arr	usar.cpp	/^const int speed_arr[] = { B38400, B19200, B4800, B2400, B1200, B300,$/;"	v
+tod_pn	main.cpp	/^	int tod_pn;$/;"	m	struct:weather_s	file:
+tod_weather	main.cpp	/^	int tod_weather;$/;"	m	struct:weather_s	file:
+tod_wind	main.cpp	/^	int tod_wind;$/;"	m	struct:weather_s	file:
+tom_pn	main.cpp	/^	int tom_pn;$/;"	m	struct:weather_s	file:
+tom_weather	main.cpp	/^	int tom_weather;$/;"	m	struct:weather_s	file:
+tom_wind	main.cpp	/^	int tom_wind;$/;"	m	struct:weather_s	file:
+uart_read	usar.cpp	/^int USAR::uart_read(char *data, int data_len)$/;"	f	class:USAR
+uart_write	usar.cpp	/^int USAR::uart_write(char *buff, int size)$/;"	f	class:USAR
+weather_name	main.cpp	/^const char weather_name[33][64]=$/;"	v
+weather_s	main.cpp	/^typedef struct weather_s$/;"	s	file:
+wind_name	main.cpp	/^const char wind_name[8][64]=$/;"	v
+~USAR	usar.cpp	/^USAR::~USAR()$/;"	f	class:USAR
