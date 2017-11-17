@@ -77,7 +77,7 @@ int USAR::uart_write(char *buff, int size)
 	lseek(fp,0,SEEK_SET);
 	if (write(fp, buff, size)<0)
 	{
-		//perror("write");
+		perror("write");
 		//exit(EXIT_FAILURE);
 	}
 	return size;
@@ -98,7 +98,7 @@ int USAR::init_uart(char *tty_name, int speed, int databits, int stopbits, int p
 	{
 		//perror("open");
 		printf("error:open\n");
-		//exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 
 	set_speed(fp, speed);
@@ -106,7 +106,7 @@ int USAR::init_uart(char *tty_name, int speed, int databits, int stopbits, int p
 	if (set_Parity(fp, databits, stopbits, parity) == FALSE)
 	{
 		printf("error:set_Parity\n");
-		//exit(EXIT_FAILURE);
+		exit(EXIT_FAILURE);
 	}
 
 	//close(fd);

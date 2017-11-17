@@ -47,36 +47,34 @@ char* http(void)
 {
 	FILE *fp=NULL;
 	FILE *fp_text=NULL;
-	//char buf[BUFSIZ];
-	if (NULL != (fp = popen("curl http://tianqi.moji.com/", "r")))
+	fp = popen("curl http://tianqi.moji.com/", "r");
+	if (NULL != fp)
 	{
 		fread(buf, 1024*1024, 1, fp);
-		fp_text=fopen("weather.text","w+");
+		fp_text=fopen("/home/pi/code/nice/weather.text","w+");
 		fprintf(fp_text,"%s",buf);
+		pclose(fp);
+		fclose(fp_text);
+		return buf;
 	}
 	else 
 	{
 		printf("error:popen error\n");
+	    //return 0;	
 		//fprintf(stderr, "popen error...\n");
 		//exit(1);
+		//system("/home/pi/code/nice/bin/Nice_code");
+		system("sudo reboot");
 	}
 	
-	//fp_text=fopen("weather.text","w+");
-	//fprintf(fp_text,"%s",buf);
-	//printf("%s\n", buf);
-	if(fp!=NULL)
-	{
-		pclose(fp);
-		pclose(fp_text);
-	}
-	return buf;
+	return 0;
 }
 
 char* open_file()
 {	 
 	int len =0;
 	FILE *file;
-	file= fopen("weather.text","r+");
+	file= fopen("/home/pi/code/nice/weather.text","r+");
 	if(file==NULL)
 	{
 		return 0;
@@ -390,30 +388,46 @@ void init_wheather()
 
 }
 
+int get_time()
+{
+	FILE *fp=NULL;
+	char buf[1024];
+	int i=0;
+	fp=popen("date | awk '{print $5}'","r");
+	fread(buf, 32, 1, fp);
+
+	printf("%s",buf);
+	
+	i=atoi(buf);	
+
+	fclose(fp);	
+	return i;
+}
+
 int main(void)
 {
 	int i=0;
+	int time=0;
 	char *p_bematch;
 	char head[2]={0xff,0xff};
+	char head1[2]={0xfe,0xfe};
 	char dev_buf[] = "/dev/ttyAMA0";
 	USAR usar;
 	
 	//usar.init_uart(dev_buf, 9600, 8, 1, 'N');
 	
-	sleep(60);
+	sleep(20);
 	while(1)
 	{
 		init_wheather();	
 		usar.init_uart(dev_buf, 9600, 8, 1, 'N');
-		
+		time=get_time();	
 		if(i==0)
 		{
-			//printf("get\n");
 			p_bematch=http();// www.xxx.com
 		}
 		else
 		{
-			//printf("open\n");
 			p_bematch=open_file();
 		}
 		if(p_bematch!=0)
@@ -422,15 +436,15 @@ int main(void)
 			get_tomorrow_weater(p_bematch);
 			usar.uart_write(head, 2);
 			usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
+			usar.uart_write(head1, 2);
+			usar.uart_write((char *)&time, sizeof(time));	
+			i++;
 		}
 	
-		//usar.uart_write(head, 2);
-		//usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
 		usar.close_uart();	
 		//show_num();	
-		sleep(5);
-		i++;
-		if(i==360)
+		sleep(3);
+		if(i==2400)
 		{
 			i=0;
 		}
@@ -438,5 +452,3 @@ int main(void)
 	return 0;
 
 }
-
-
