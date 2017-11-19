@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="鸡冠区今天实况：-10度 阴，湿度：68%，西风：2级。白天：-4度,阵雪。 夜间：阵雪，-14度，天冷了，墨迹天气建议您穿着棉服或皮夹克等防风保暖的衣服，帽子、围巾、手套也是帮助保暖的单品，年老体弱者可以选择轻型羽绒服增加保暖系数。">
+        <meta name="description" content="鸡冠区今天实况：-11度 晴，湿度：54%，西北风：4级。白天：-10度,晴。 夜间：多云，-17度，外面天寒地冻，墨迹天气建议您拿出最厚的那件羽绒服来抵御寒冷，帽子、围巾、手套全副武装的出门吧。">
         <meta name="keywords" content="鸡冠区天气预报，查询">
         <meta name="author" content="Moji Weather Web Dev Team">
         <link rel="shortcut icon" href="https://h5tq.moji.com/f5/assets/tianqi/favicon.ico">
@@ -47,9 +47,9 @@
 </div>
 
 <div id="skin"
-    data-data="13"
-    data-url="https://h5tq.moji.com/tianqi/assets/images/skin/night_1.jpg"
-    style="background: url(https://h5tq.moji.com/tianqi/assets/images/skin/night_1.jpg) no-repeat center top;background-size: 100% 100%;">
+    data-data="1"
+    data-url="https://h5tq.moji.com/tianqi/assets/images/skin/day_0.jpg"
+    style="background: url(https://h5tq.moji.com/tianqi/assets/images/skin/day_0.jpg) no-repeat center top;background-size: 100% 100%;">
 </div>
 
 <div class="wrap clearfix">
@@ -97,34 +97,44 @@
             <ul>
                                 <li>
                     <a href="https://tianqi.moji.com/aqi/china/heilongjiang/jiguan-district">
-                        <span class="level level_2">
+                        <span class="level level_1">
                             <img
-                                src="https://h5tq.moji.com/tianqi/assets/images/aqi/2.png"
-                                alt="59 良">
+                                src="https://h5tq.moji.com/tianqi/assets/images/aqi/1.png"
+                                alt="23 优">
                         </span>
-                        <em>59 良</em>
+                        <em>23 优</em>
                     </a>
                 </li>
-                                            </ul>
+                                                                            <li class="warning_aqi">
+                            <a href="https://tianqi.moji.com/alert/china/heilongjiang/jiguan-district">
+                                <span class="level_1">
+                                    <img
+                                        src="https://h5tq.moji.com/tianqi/assets/images/warn/6.png"
+                                        alt="大风">
+                                </span>
+                                <em>大风 蓝色</em>
+                            </a>
+                        </li>
+                                                </ul>
         </div>
         <div class="wea_weather clearfix">
-            <em>-10</em>
-            <span><img src="https://h5tq.moji.com/tianqi/assets/images/weather/w2.png" alt="阴"></span>
-            <b>阴</b>
-            <strong class="info_uptime">今天20:00更新</strong>
+            <em>-11</em>
+            <span><img src="https://h5tq.moji.com/tianqi/assets/images/weather/w0.png" alt="晴"></span>
+            <b>晴</b>
+            <strong class="info_uptime">今天14:00更新</strong>
         </div>
         <div class="wea_about clearfix">
-            <span>湿度 68%</span>
-            <em>西风2级</em>
+            <span>湿度 54%</span>
+            <em>西北风4级</em>
                     </div>
         <div class="wea_tips clearfix">
             <span>今日天气提示</span>
-            <em>今天有雪，天寒地冻，千万裹严实点！</em>
+            <em>天寒地冻，千万裹严实点！</em>
         </div>
     </div>
     <div class="right">
         <div class="wea_info_avator">
-            <img src="https://h5tq.moji.com/tianqi/assets/5bdfa38e3a845f79/images/avator/icon/9.png" alt="墨迹天气 小墨哥">
+            <img src="https://h5tq.moji.com/tianqi/assets/5bdfa38e3a845f79/images/avator/icon/10.png" alt="墨迹天气 小墨哥">
             <div id="windows_download">
                 <img src="https://h5tq.moji.com/tianqi/assets/5bdfa38e3a845f79/images/icon/avator_windows.png" height="35" alt="Windows 下载">
                 <a href="http://download.moji001.com/mojiapp/windoz/MoWeatherInstall_1.8.1.1.exe" target="_blank">Windows 下载</a>
@@ -149,16 +159,16 @@
                                     </li>
                                     <li>
                         <span>
-                            <img src="https://h5tq.moji.com/tianqi/assets/images/weather/w34.png" alt="阵雪">
+                            <img src="https://h5tq.moji.com/tianqi/assets/images/weather/w0.png" alt="晴">
                         </span>
-                        阵雪                    </li>
-                                <li>-14° / -4°</li>
+                        晴                    </li>
+                                <li>-17° / -10°</li>
                 <li>
-                    <em>东北风</em>
-                    <b>1级</b>
+                    <em>西北风</em>
+                    <b>4-5级</b>
                 </li>
-                <li><strong class="level_2">
-                    62 良  
+                <li><strong class="level_1">
+                    23 优  
                     </strong>
                 </li>
             </ul>
@@ -168,16 +178,16 @@
                                     </li>
                                     <li>
                         <span>
-                            <img src="https://h5tq.moji.com/tianqi/assets/images/weather/w31.png" alt="多云">
+                            <img src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png" alt="多云">
                         </span>
                         多云                    </li>
-                                <li>-17° / -8°</li>
+                                <li>-14° / -5°</li>
                 <li>
                     <em>西北风</em>
-                    <b>4-5级</b>
+                    <b>5-6级</b>
                 </li>
                 <li><strong class="level_2">
-                    82 良  
+                    71 良  
                     </strong>
                 </li>
             </ul>
@@ -187,16 +197,16 @@
                                     </li>
                                     <li>
                         <span>
-                            <img src="https://h5tq.moji.com/tianqi/assets/images/weather/w31.png" alt="多云">
+                            <img src="https://h5tq.moji.com/tianqi/assets/images/weather/w0.png" alt="晴">
                         </span>
-                        多云                    </li>
-                                <li>-17° / -9°</li>
+                        晴                    </li>
+                                <li>-9° / 2°</li>
                 <li>
-                    <em>西北风</em>
+                    <em>西南风</em>
                     <b>4-5级</b>
                 </li>
                 <li><strong class="level_2">
-                    65 良  
+                    83 良  
                     </strong>
                 </li>
             </ul>
@@ -284,7 +294,7 @@
                                                             <img src="https://h5tq.moji.com/tianqi/assets/images/script/12.png">
                                                     </span>
                         <dl>
-                            <dt>较易发</dt>
+                            <dt>易发</dt>
                             <dd>感冒</dd>
                         </dl>
                     </a>
@@ -306,7 +316,7 @@
                                                             <img src="https://h5tq.moji.com/tianqi/assets/images/script/0.png">
                                                     </span>
                         <dl>
-                            <dt>良</dt>
+                            <dt>优</dt>
                             <dd>空气污染扩散</dd>
                         </dl>
                     </a>
@@ -317,7 +327,7 @@
                                                             <img src="https://h5tq.moji.com/tianqi/assets/images/script/20.png">
                                                     </span>
                         <dl>
-                            <dt>凉</dt>
+                            <dt>寒冷</dt>
                             <dd>穿衣</dd>
                         </dl>
                     </a>
@@ -350,7 +360,7 @@
                                                             <img src="https://h5tq.moji.com/tianqi/assets/images/script/28.png">
                                                     </span>
                         <dl>
-                            <dt>较适宜</dt>
+                            <dt>不适宜</dt>
                             <dd>钓鱼</dd>
                         </dl>
                     </a>
@@ -468,7 +478,7 @@
 <div class="wrap clearfix calendar">
     <div class="g_title clearfix">
         <span>天气日历</span>
-        <em><!--今天1:09更新--></em>
+        <em><!--今天1:10更新--></em>
     </div>
     <div class="select clearfix">
         <div class="select_year">
@@ -661,14 +671,14 @@
                                                                 <p>-13/-4°</p>
                                 <p>西风&nbsp;&nbsp;3-4级</p>
                             </li>
-                                                                                                                        <li class="item active">
+                                                                                                                        <li class="item ">
                                                                 <em>17</em>
                                                                 <b>
                                 <img
                                     src="https://h5tq.moji.com/tianqi/assets/images/weather/w13.png"
                                     alt="阵雪                                "></b>
-                                                                <p>-13/-4°</p>
-                                <p>东北风&nbsp;&nbsp;2级</p>
+                                                                <p>-14/-4°</p>
+                                <p>东北风&nbsp;&nbsp;1级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                             <span><!--休--></span>
@@ -677,17 +687,17 @@
                                 <img
                                     src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
                                     alt="多云                                "></b>
-                                                                <p>-17/-7°</p>
+                                                                <p>-17/-9°</p>
                                 <p>西北风&nbsp;&nbsp;4-5级</p>
                             </li>
-                                                                                                                                                            <li class="item ">
+                                                                                                                                                            <li class="item active">
                                                                             <span><!--休--></span>
                                                                  <em>19</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
-                                    alt="多云                                "></b>
-                                                                <p>-17/-9°</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w0.png"
+                                    alt="晴                                "></b>
+                                                                <p>-17/-10°</p>
                                 <p>西北风&nbsp;&nbsp;4-5级</p>
                             </li>
                                                                                                                         <li class="item ">
@@ -696,17 +706,17 @@
                                 <img
                                     src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
                                     alt="多云                                "></b>
-                                                                <p>-13/-8°</p>
-                                <p>西风&nbsp;&nbsp;3-4级</p>
+                                                                <p>-14/-5°</p>
+                                <p>西北风&nbsp;&nbsp;5-6级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>21</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w13.png"
-                                    alt="阵雪                                "></b>
-                                                                <p>-10/-2°</p>
-                                <p>西南风&nbsp;&nbsp;3-4级</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w0.png"
+                                    alt="晴                                "></b>
+                                                                <p>-9/2°</p>
+                                <p>西南风&nbsp;&nbsp;4-5级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>22</em>
@@ -714,7 +724,7 @@
                                 <img
                                     src="https://h5tq.moji.com/tianqi/assets/images/weather/w13.png"
                                     alt="阵雪                                "></b>
-                                                                <p>-12/-4°</p>
+                                                                <p>-11/-2°</p>
                                 <p>西风&nbsp;&nbsp;4-5级</p>
                             </li>
                                                                                                                         <li class="item ">
@@ -723,26 +733,26 @@
                                 <img
                                     src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
                                     alt="多云                                "></b>
-                                                                <p>-13/-6°</p>
+                                                                <p>-15/-5°</p>
                                 <p>西北风&nbsp;&nbsp;3-4级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>24</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w2.png"
-                                    alt="阴                                "></b>
-                                                                <p>-17/-8°</p>
-                                <p>西北风&nbsp;&nbsp;3-4级</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
+                                    alt="多云                                "></b>
+                                                                <p>-13/-5°</p>
+                                <p>西风&nbsp;&nbsp;3-4级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                             <span><!--休--></span>
                                                                  <em>25</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w15.png"
-                                    alt="雪                                "></b>
-                                                                <p>-18/-9°</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
+                                    alt="多云                                "></b>
+                                                                <p>-14/-5°</p>
                                 <p>西风&nbsp;&nbsp;3-4级</p>
                             </li>
                                                                                                                                                             <li class="item ">
@@ -750,37 +760,37 @@
                                                                  <em>26</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
-                                    alt="多云                                "></b>
-                                                                <p>-20/-11°</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w2.png"
+                                    alt="阴                                "></b>
+                                                                <p>-23/-10°</p>
                                 <p>西北风&nbsp;&nbsp;3-4级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>27</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w2.png"
-                                    alt="阴                                "></b>
-                                                                <p>-18/-8°</p>
-                                <p>西南风&nbsp;&nbsp;3级</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
+                                    alt="多云                                "></b>
+                                                                <p>-22/-16°</p>
+                                <p>西北风&nbsp;&nbsp;3-4级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>28</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w15.png"
-                                    alt="雪                                "></b>
-                                                                <p>-15/-7°</p>
-                                <p>西南风&nbsp;&nbsp;4级</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
+                                    alt="多云                                "></b>
+                                                                <p>-19/-11°</p>
+                                <p>西风&nbsp;&nbsp;3-4级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>29</em>
                                                                 <b>
                                 <img
-                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w1.png"
-                                    alt="多云                                "></b>
-                                                                <p>-17/-5°</p>
-                                <p>西北风&nbsp;&nbsp;4级</p>
+                                    src="https://h5tq.moji.com/tianqi/assets/images/weather/w15.png"
+                                    alt="雪                                "></b>
+                                                                <p>-11/-3°</p>
+                                <p>西南风&nbsp;&nbsp;3级</p>
                             </li>
                                                                                                                         <li class="item ">
                                                                 <em>30</em>
@@ -788,8 +798,8 @@
                                 <img
                                     src="https://h5tq.moji.com/tianqi/assets/images/weather/w0.png"
                                     alt="晴                                "></b>
-                                                                <p>-19/-14°</p>
-                                <p>西北风&nbsp;&nbsp;3-4级</p>
+                                                                <p>-14/-1°</p>
+                                <p>西风&nbsp;&nbsp;1级</p>
                             </li>
                                                                                             <li class="item"></li>
                                                                                                                     <li class="item"></li>
@@ -849,10 +859,10 @@
                                        <li><a target="_blank" rel="nofollow" href="http://www.xixi123.com/jiankang/37522.html">假性近视眼怎么恢复？</a></li>
                                        <li><a target="_blank" rel="nofollow" href="http://www.xixi123.com/jiankang/37518.html">指甲盖上有黑线就是患癌了吗？</a></li>
                                        <li><a target="_blank" rel="nofollow" href="http://www.xixi123.com/jiankang/37517.html">如何增加肺活量？</a></li>
-                                                                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1334635.html">穷小伙做“备胎”娶漂亮女子 婚后尴尬</a></li>
-                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1334637.html">这树要成精？古树竟自己“走”了150米</a></li>
-                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1334529.html">印度死丘事件之谜 千年古城为什么一夜毁灭</a></li>
-                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1334525.html">中国造超级设备搜寻外星人 引发全球震动</a></li>
+                                                                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1335963.html">假释犯吃性药后猥亵幼童 尸体扔排水渠</a></li>
+                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1335967.html">大妈赤裸泡澡陌生男推门而入:过不了这坎</a></li>
+                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1335959.html">工厂女孩年轻又好骗?男子玩套路却被套路</a></li>
+                                       <li><a target="_blank" rel="nofollow" href="http://bbs.miercn.com/moji/201711/1335205.html">14岁少女三次怀孕两次产子 却不知生父</a></li>
                                  
 
             </ul>

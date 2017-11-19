@@ -45,6 +45,12 @@ s_weather s_weather_v;
 
 char* http(void)
 {
+	system("curl http://tianqi.moji.com/ > /home/pi/code/nice/weather.text");
+	return buf;
+}
+/*
+char* http(void)
+{
 	FILE *fp=NULL;
 	FILE *fp_text=NULL;
 	fp = popen("curl http://tianqi.moji.com/", "r");
@@ -69,7 +75,7 @@ char* http(void)
 	
 	return 0;
 }
-
+*/
 char* open_file()
 {	 
 	int len =0;
@@ -407,10 +413,10 @@ int get_time()
 int main(void)
 {
 	int i=0;
-	int time=0;
+	//int time=0;
 	char *p_bematch;
 	char head[2]={0xff,0xff};
-	char head1[2]={0xfe,0xfe};
+	//char head1[2]={0xfe,0xfe};
 	char dev_buf[] = "/dev/ttyAMA0";
 	USAR usar;
 	
@@ -421,7 +427,7 @@ int main(void)
 	{
 		init_wheather();	
 		usar.init_uart(dev_buf, 9600, 8, 1, 'N');
-		time=get_time();	
+		//time=get_time();	
 		if(i==0)
 		{
 			p_bematch=http();// www.xxx.com
@@ -436,8 +442,8 @@ int main(void)
 			get_tomorrow_weater(p_bematch);
 			usar.uart_write(head, 2);
 			usar.uart_write((char *)&s_weather_v, sizeof(s_weather_v));
-			usar.uart_write(head1, 2);
-			usar.uart_write((char *)&time, sizeof(time));	
+			//usar.uart_write(head1, 2);
+			//usar.uart_write((char *)&time, sizeof(time));	
 			i++;
 		}
 	
